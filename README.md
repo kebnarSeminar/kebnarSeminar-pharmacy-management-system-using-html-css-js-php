@@ -1,6 +1,6 @@
 # kebnarSeminar-pharmacy-management-system-using-html-css-js-php
 # firstly you must connect your php code with XAMPP SERVER
-# if you don't know how to download and connect Xampp server with php,you need to watch my youtube channel following👇👇👇
+# if you don't know how to download and connect Xampp server with php,you need to watch my youtube videos following👇👇👇
 # <p>Please Don't forget to subscribe please<a href="https://www.youtube.com/@KebnarTube-br8un/playlists">  🔗Click here</a></p> 
 # if you have any trouble with this code,put inside my channel comment section
 # final products are looks like the following pictures when run inside webbroser<br>
