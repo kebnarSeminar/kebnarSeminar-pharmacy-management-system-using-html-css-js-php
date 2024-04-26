@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> type of diseases </title>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#flip").click(function() {
+                $("#panel").slideToggle("slow");
+            });
+            $("#flip1").click(function() {
+                $("#panel1").slideToggle("slow");
+            });
+            $("#flip2").click(function() {
+                $("#panel2").slideToggle("slow");
+            });
+            $("#flip3").click(function() {
+                $("#panel3").slideToggle("slow");
+            });
+            $("#flip4").click(function() {
+                $("#panel4").slideToggle("slow");
+            });
+            $("#flip5").click(function() {
+                $("#panel5").slideToggle("slow");
+            });
+            $("#flip6").click(function() {
+                $("#panel6").slideToggle("slow");
+            });
+            $("#flip7").click(function() {
+                $("#panel7").slideToggle("slow");
+            });
+            $("#flip8").click(function() {
+                $("#panel8").slideToggle("slow");
+            });
+
+        });
+    </script>
+
+    <style>
+
+    </style>
+
+
+    <link rel="icon" type="image/x-icon" href="search.png">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- The form -->
+    <style type="text/css">
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: top;
+            background-color: #011111;
+            border: solid 1px #ffffff;
+            color: white;
+        }
+        
+        #panel,
+        #panel1,
+        #panel2,
+        #panel3,
+        #panel4,
+        #panel5,
+        #panel6,
+        #panel7,
+        #panel8 {
+            padding: 10px;
+            width: 700px;
+            display: none;
+            height: 700px;
+            overflow: scroll;
+        }
+        
+        #panel1,
+        #flip1 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #072401;
+            border: solid 1px #ffffff;
+            color: white;
+        }
+        
+        #panel2,
+        #flip2 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #000301;
+            border: solid 1px #ff0000;
+            color: rgb(255, 255, 255);
+        }
+        
+        #panel3,
+        #flip3 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #011b0b;
+            border: solid 1px #ff0000;
+            color: white;
+        }
+        
+        #panel4,
+        #flip4 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #01111b;
+            border: solid 1px #00e1ff;
+            color: white;
+        }
+        
+        #panel5,
+        #flip5 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #011b0b;
+            border: solid 1px #ff0000;
+            color: white;
+        }
+        
+        #panel6,
+        #flip6 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #011b0b;
+            border: solid 1px #ff0000;
+            color: white;
+        }
+        
+        #panel7,
+        #flip7 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #011b0b;
+            border: solid 1px #ff0000;
+            color: white;
+        }
+        
+        #panel8,
+        #flip8 {
+            width: 700px;
+            padding: 10px;
+            text-align: top;
+            background-color: #011b0b;
+            border: solid 1px #ff0000;
+            color: white;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Style the search field */
+        
+        form.example input[type=text] {
+            margin: 25px 0px 0px 25px;
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 20%;
+            background: #f1f1f1;
+        }
+        
+        form.example button {
+            margin: 25px 0px 0px 0px;
+            float: left;
+            width: 4%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+        
+        form.example button:hover {
+            background: #0b7dda;
+        }
+        /* Clear floats */
+        
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        div.m1 {
+            border: 1px;
+            padding: 0px 0px 0px 20px;
+            background: floralwhite;
+            width: 90%;
+            height: 100%;
+        }
+        
+        table.t {
+            text-align: left;
+            padding: 0px 0px 0px 10px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        h2 {
+            text-align: center;
+            color: brown;
+        }
+        
+        h3 {
+            text-align: left;
+            color: brown;
+        }
+        
+        .home {
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="homepage.html">
+        <h2 class="home" style="color:blue;">HOMEPAGE</h2>
+    </a>
+    <h2>Welcome To Types Of Diseases Page </h2>
+
+
+    <h3>You Can Search for What You Want to Know About some Diseases </h3>
+
+    <form class="example" action="action_page.php">
+        <input type="text" placeholder="Search diseases" name="search" id="search">
+        <button type="submit"><i class="fa fa-search" id="button"></i></button><br>
+        <br>
+        <br>
+        <h3>Click Each Of Them One By One To Display </h3>
+    </form>
+    <table class="t">
+        <tr>
+            <td>
+                <form>
+                    <div id="flip">HEADACHE</div>
+                    <div id="panel">
+                        Headaches are a very common condition that most people will experience many times during their lives. The main symptom of a headache is pain in your head or face. There are several types of headaches, and tension headaches are the most common. While most
+                        headaches aren’t dangerous, certain types can be a sign of a serious underlying condition. What is a headache? A headache is a pain in your head or face that’s often described as a pressure that’s throbbing, constant, sharp or
+                        dull. Headaches can differ greatly in regard to pain type, severity, location and frequency. Headaches are a very common condition that most people will experience many times during their lives. They’re the most common form of
+                        pain and are a major reason cited for days missed at work or school, as well as visits to healthcare providers. While most headaches aren’t dangerous, certain types can be a sign of a more serious condition. What are the types
+                        of headaches? There are more than 150 types of headaches. They fall into two main categories: primary and secondary headaches. Primary headaches Dysfunction or over-activity of pain-sensitive features in your head cause primary
+                        headaches. They’re not a symptom of or caused by an underlying medical condition. Some people may have genes that make them more likely to develop primary headaches. Types of primary headaches include: Tension-type headaches (most
+                        common type of headache). Migraine headaches. Cluster headaches. New daily persistent headaches (NDPH). Some primary headaches can be triggered by lifestyle factors or situations, including: Alcohol, particularly red wine.
+
+                    </div>
+
+
+
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div id="flip1">FEVER</div>
+                    <div id="panel1">
+
+                        Overview Fever is also known as hyperthermia, pyrexia, or elevated temperature. It describes a body temperature that’s higher than normal. Fever can affect children and adults. A short-term increase in body temperature can help your body fight off illness.
+                        However, a severe fever can be a symptom of a serious condition that requires immediate medical attention.Electrolyte imbalance An electrolyte imbalance can lead to serious signs and symptoms such as: Muscle cramps. These result
+                        from the rapid loss of salts such as sodium, chloride and potassium. Shock. This is one of the most serious complications of dehydration. It occurs when low blood volume causes a drop in blood pressure and a drop in the amount
+                        of oxygen in your body. If untreated, severe hypovolemic shock can cause death in minutes. When to see a doctor The risk of cholera is slight in industrialized nations. Even in areas where it exists you're not likely to become
+                        infected if you follow food safety recommendations. Still, cases of cholera occur throughout the world. If you develop severe diarrhea after visiting an area with active cholera, see your doctor. If you have diarrhea, especially
+                        severe diarrhea, and think you might have been exposed to cholera, seek treatment right away. Severe dehydration is a medical emergency that requires immediate care. What to look for
+
+
+
+
+
+                    </div>
+
+
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <div id="flip2">HIV/AIDS</div>
+                    <div id="panel2">
+
+                        HIV/AIDS (Human Immunodeficiency Virus, AIDS) About this Condition The Facts Causes Symptoms and Complications Making the Diagnosis Treatment and Prevention DRUGS CONDITIONS A B C D E F G H I J K L M N O P Q R S T U V W X Y Z The Facts AIDS (acquired
+                        immune deficiency syndrome) was first recognized in North America in the early 1980s. It is caused by a virus known as HIV (human immunodeficiency virus). HIV infection has become a worldwide epidemic. The World Health Organization
+                        estimates that since its discovery, it has caused over 40 million deaths worldwide, and approximately 38 million people are living with AIDS. It is estimated that around 63,000 people live with HIV in Canada, and of these people,
+                        about 10% have not received a diagnosis. HIV is more common among certain populations, such as men who have sex with men, and people who inject illicit drugs. The infection is also more common among socially disadvantaged communities.
+                        Causes The virus can be found in the blood, semen, vaginal fluid, and breast milk of infected people. HIV is also found in saliva, sweat, and tears, though not in high enough amounts to transmit the virus to another person. HIV
+                        does not transmit through sneezing, shaking hands, or from toilet seats or mosquito bites. The 2 most common ways to be infected with HIV in North America are through unprotected sex and sharing needles. HIV may be transmitted
+                        through unprotected vaginal, anal, or oral sex. Although the risk of infection is lower with oral sex, it is still important to use protection during oral sex, such as a dental dam (a piece of latex to cover the vagina during oral
+                        sex) or a condom. HIV can also be passed on through perinatal infection, where mothers who have HIV are at risk of giving the disease to the baby during birth. The risk of perinatal infection is declining with new treatments. Breast-feeding
+                        by an infected mother can also transmit HIV. Once HIV enters the bloodstream, it takes over cells vital to the immune response, known as CD4+ lymphocytes. The virus then inserts its own genes into the cell, turning it into a miniature
+                        factory that produces more copies of the virus. Slowly, the amount of virus in the blood goes up and the number of healthy CD4+ cells goes down. The destruction of CD4+ cells interferes with the body's ability to fight off infections,
+                        cancers, and other diseases. Symptoms and Complications Symptoms of HIV infection appear 2 to 12 weeks after exposure. At this point the virus begins rapidly taking over immune cells in the blood. The symptoms of this phase are
+                        flu-like and include:
+
+
+
+
+                    </div>
+
+
+                </form>
+            </td>
+
+
+
+            <td>
+                <form>
+                    <div id="flip3">THE DIABETE</div>
+                    <div id="panel3">
+
+                        What are the types of diabetes? There are several types of diabetes. The most common forms include: Type 2 diabetes: With this type, your body doesn’t make enough insulin and/or your body’s cells don’t respond normally to the insulin (insulin resistance).
+                        This is the most common type of diabetes. It mainly affects adults, but children can have it as well. Prediabetes: This type is the stage before Type 2 diabetes. Your blood glucose levels are higher than normal but not high enough
+                        to be officially diagnosed with Type 2 diabetes. Type 1 diabetes: This type is an autoimmune disease in which your immune system attacks and destroys insulin-producing cells in your pancreas for unknown reasons. Up to 10% of people
+                        who have diabetes have Type 1. It’s usually diagnosed in children and young adults, but it can develop at any age. Gestational diabetes: This type develops in some people during pregnancy. Gestational diabetes usually goes away
+                        after pregnancy. However, if you have gestational diabetes, you’re at a higher risk of developing Type 2 diabetes later in life. Other types of diabetes include: Type 3c diabetes: This form of diabetes happens when your pancreas
+                        experiences damage (other than autoimmune damage), which affects its ability to produce insulin. Pancreatitis, pancreatic cancer, cystic fibrosis and hemochromatosis can all lead to pancreas damage that causes diabetes. Having
+                        your pancreas removed (pancreatectomy) also results in Type 3c. Latent autoimmune diabetes in adults (LADA): Like Type 1 diabetes, LADA also results from an autoimmune reaction, but it develops much more slowly than Type 1. People
+                        diagnosed with LADA are usually over the age of 30. Maturity-onset diabetes of the young (MODY): MODY, also called monogenic diabetes, happens due to an inherited genetic mutation that affects how your body makes and uses insulin.
+                        There are currently over 10 different types of MODY. It affects up to 5% of people with About 537 million adults across the world have diabetes. Experts predict this number will rise to 643 million
+
+
+                    </div>
+
+
+
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <div id="flip4">CHOLERA</div>
+                    <div id="panel4">
+
+                        Symptoms Most people exposed to the cholera bacterium (Vibrio cholerae) don't become ill and don't know they've been infected. But because they shed cholera bacteria in their stool for seven to 14 days, they can still infect others through contaminated
+                        water. Most cases of cholera that cause symptoms cause mild or moderate diarrhea that's often hard to tell apart from diarrhea caused by other problems. Others develop more-serious signs and symptoms of cholera, usually within
+                        a few days of infection. Symptoms of cholera infection can include: Diarrhea. Cholera-related diarrhea comes on suddenly and can quickly cause dangerous fluid loss — as much as a quart (about 1 liter) an hour. Diarrhea due to cholera
+                        often has a pale, milky appearance that resembles water in which rice has been rinsed. Nausea and vomiting. Vomiting occurs especially in the early stages of cholera and can last for hours. Dehydration. Dehydration can develop
+                        within hours after cholera symptoms start and range from mild to severe. A loss of 10% or more of body weight indicates severe dehydration. Signs and symptoms of cholera dehydration include irritability, fatigue, sunken eyes, a
+                        dry mouth, extreme thirst, dry and shriveled skin that's slow to bounce back when pinched into a fold, little or no urinating, low blood pressure, and an irregular heartbeat. thats s;pw tp bpnve caj weh when piched inoe a fold
+                        . little lor no urinating low bloos pressure, and an irregular heartbeat . signs and symptoms of cholera dehyhdration icludes irriatility , fatiues ,sunken eyes ,ad Dehydration can lead to a rapid loss of minerals in your blood
+                        that maintain the balance of fluids in your body. This is called an electrolyte imbalance.
+
+
+
+                    </div>
+
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div id="flip5"><b>MALARIA</b></div>
+                    <div id="panel5">
+                        Malaria is a serious disease that is caused by a parasite called Plasmodium. There are five types of Plasmodium parasites that can infect humans1. The parasite is spread to humans through the bites of infected mosquitoes, usually of the Anopheles genus23.
+                        When a mosquito bites a person who has malaria, it picks up the parasite from the person’s blood. When it bites another person, it injects the parasite into the person’s bloodstream2. The parasite then travels to the liver, where
+                        it multiplies and invades the red blood cells. This causes the symptoms of malaria, s uch as fever, chills, headache, nausea and vomiting2. Malaria can also be transmitted from a pregnant woman to her baby before or during birth,
+                        or through blood transfusions, organ donations or shared needles24. Malaria is common in tropical and subtropical regions of the world, especially in Africa and South Asia2. It can be prevented by avoiding mosquito bites, using
+                        insect repellents, wearing protective clothing and s leeping under mosquito nets2. It can also be prevented by taking antimalarial drugs before, during and after traveling to areas where malaria is prevalent2. Malaria can be treated
+                        with antimalarial drugs that kill the parasites in the blood. However, some parasites may be resistant to certain drugs, making treatment more difficult2.
+                        <h6 text-align="center">Symtops of malaria</h6>
+                        A brief summary of the symptoms of malaria is: Malaria is a disease that causes fever, chills, headache, muscle aches, fatigue and nausea. The symptoms may be mild or severe, and may occur in cycles or attacks. Some people may also experience vomiting,
+                        diarrhea, chest pain, cough, breathing problems, anemia, jaundice and confusion. The symptoms usually start within 10 to 15 days of being bitten by an infected mosquito1
+                        <h6 text-align="center">Preventive measures of malaria</h6>
+                        Malaria is a preventable and treatable disease that is caused by a parasite that is spread by infected mosquitoes. The preventive measures of malaria include: Avoiding mosquito bites by using insect repellents, wearing protective clothing and sleeping
+                        under mosquito nets123. Applying insecticides to kill adult mosquitoes or larvicides to kill mosquito larvae in breeding sites12. Taking antimalarial drugs before, during and after traveling to areas where malaria is prevalent,
+                        as prescribed by a doctor123. Getting tested and treated for malaria as soon as possible if symptoms occur123. Preventing malaria transmission from pregnant women to their babies by taking antimalarial drugs during pregnancy and
+                        delivery12. Supporting malaria control programs and research efforts to develop new tools and strategies to fight malaria12.
+                        <h6 text-align="cnetr">Medicine for treating malaria</h6>
+                        Malaria is a treatable disease that is caused by a parasite that is spread by infected mosquitoes. The medicines used for treating malaria include: Antimalarial drugs that kill the parasite in the blood. The type and dose of drug depends on the type of
+                        parasite, the severity of symptoms, the age and pregnancy status of the person , and the drug resistance in the area12. Some examples of antimalarial drugs are chloroquine, quinine, hydroxychloroquine, mefloquine, atovaquone, proguanil
+                        and artemisinin combination therapies (ACTs)123. Antibiotics that can treat bacterial infections that may occur with malaria or enhance the effect of some antimalarial drugs12. Some examples of antibiotics are doxycycline, tetracycline
+                        and clindamycin123. Glucocorticoids that can reduce inflammation and swelling in severe cases of malaria1. Antinausea medications that can treat nausea and vomiting that may occur with malaria1. Intravenous fluids and blood transfusions
+                        that can treat dehydration and anemia that may occur with malaria1. Always consult your doctor before taking any medicine for malaria, as they may have side effects or interact with other medications. Follow the dosage instructions
+                        carefully and complete the course of treatment. Seek emergency care if you have severe symptoms or complications.
+
+                    </div>
+
+
+                </form>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <div id="flip6"><b>MORE ON FEVER DISEASE</b></div>
+                    <div id="panel6">
+                        Fever is a rise in body temperature above the normal range. It is a part of the body’s immune response to fight off infections or other conditions. Fever can be caused by various factors, such as: Infections by bacteria, viruses, fungi or parasites. Some
+                        common examples are colds, flu, pneumonia, gastroenteritis, urinary tract infections and skin infections123. Immunizations that stimulate the immune system to produce antibodies. Some vaccines that may cause fever in children are
+                        diphtheria, tetanus and pertussis (DTaP), measles, mumps and rubella (MMR) and chickenpox12. Teething in infants that may cause inflammation and pain in the gums12. Inflammatory diseases that cause swelling and irritation in the
+                        body. Some examples are rheumatoid arthritis, Crohn’s disease and lupus12. Blood clots that block the flow of blood and oxygen to a part of the body12. Extreme sunburn that damages the skin and causes inflammation12. Food poisoning
+                        that occurs when you eat contaminated food or drink12. Medications that may cause an allergic reaction or interfere with the body’s temperature regulation. Some examples are antibiotics, antihistamines and anticonvulsants12. Fever
+                        is usually a sign that the body is trying to fight off an illness or condition. However, a very high fever can be dangerous and may require medical attention.
+                        <h6>Symptoms of fever</h6>
+                        <p>
+                            The symptoms of fever may include: Elevated temperature (above 100.4°F or 38°C for adults and children, and above 100.4°F or 38°C for infants measured rectally)123. Chills, shivering and shaking123. Body aches and headaches123. Fatigue (tiredness) and
+                            weakness123. Loss of appetite and irritability123. Sweating and flushed complexion or hot skin123. Dehydration (dry mouth, thirst, reduced urine output)12. The symptoms of fever may vary depending on the cause and severity
+                            of the fever. Some people may also experience other symptoms, such as nausea, vomiting, cough, sore throat, earache, chest pain, breathing problems, confusion or seizures123. If you have any of these symptoms or any other unusual
+                            or severe symptoms with your fever, you should see a doctor for a proper diagnosis and treatment.
+
+                        </p>
+                        <h6>Preventive measures of fever</h6>
+                        A brief summary of the preventive measures of fever is: Fever is a rise in body temperature above the normal range. It is a sign of the body’s immune response to fight off infections or other conditions. T he preventive measures of fever include: Avoiding
+                        exposure to infections by washing your hands frequently, covering your mouth and nose when you cough or sneeze, and staying away from people who are sick12. Getting vaccinated against diseases that can cause fever, such as influenza,
+                        diphtheria, tetanus and pertussis (DTaP), measles, mumps and rubella (MMR) and chickenpox12. Drinking plenty of fluids to prevent dehydration and help regulate your body temperature12. Dressing appropriately for the weather and
+                        avoiding extreme heat or cold12. Taking medications such as acetaminophen (Tylenol) or ibuprofen (Advil) to lower your fever if it causes discomfort or interferes with your daily activities12. Do not give aspirin to children under
+                        17 years old due to the risk of Reye’s syndrome12. Seeking medical attention if your fever is very high (above 104°F or 40°C), lasts more than three days, or is accompanied by other severe or unusual symptoms12.
+                        <h6>Medicines for treating</h6>
+                        <p>
+                            Antipyretics that lower the body temperature and reduce discomfort. These are nonprescription medications, such as acetaminophen (Tylenol) or ibuprofen (Advil). They should be used according to the label instructions or as recommended by your health care
+                            provider . They should not be given to children under 17 years old due to the risk of Reye’s syndrome123. Antibiotics that treat bacterial infections that may cause fever, such as pneumonia, strep throat or ear infections.
+                            These are prescription medications that should be taken as directed by your health care provider. They should not be used for viral infections, such as colds or flu12. Antivirals that treat viral infections that may cause fever,
+                            such as influenza, chickenpox or herpes. These are prescription medications that should be taken as directed by your health care provider. They may shorten the duration and severity of the infection12. Anti-inflammatories that
+                            reduce inflammation and swelling that may occur with fever, such as glucocorticoids or NSAIDs. These are prescription medications that should be taken as directed by your health care provider. They may have side effects or
+                            interact with other medications12. Antinausea medications that treat nausea and vomiting that may occur with fever, such as metoclopramide (Reglan) or prochlorperazine (Compazine). These are prescription medications that should
+                            be taken as directed by your health care provider12. Always consult your health care provider before taking any medicine for fever, as they may have side effects or interact with other medications. Follow the dosage instructions
+                            carefully and do not overuse pain relievers, as this may cause more frequent or worse fevers.
+
+
+                    </div>
+
+
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div id="flip7"><b>FLU DISEASE</b></div>
+                    <div id="panel7">
+                        Flu is a contagious respiratory illness that is caused by influenza viruses. There are four types of influenza viruses: A, B, C and D. Influenza A and B viruses are the main causes of seasonal flu epidemics in humans12. Influenza C virus usually causes
+                        mild respiratory infections12. Influenza D virus mainly affects cattle and has not been reported to infect humans12. Flu spreads from person to person through respiratory droplets that are produced when someone with flu coughs,
+                        sneezes or talks. These droplets can land in the mouths or noses of people who are nearby, or be inhaled into the lungs123. Flu can also spread by touching a surface or object that has flu virus on it, and then touching your own
+                        mouth, nose or eyes123. Flu can affect anyone, but some people are at higher risk of developing serious complications from flu, such as pneumonia, bronchitis, sinus infections, ear infections, heart problems or death. These include
+                        children under 5 years old, adults over 65 years old, pregnant women, people with chronic medical conditions (such as asthma, diabetes or heart disease), people with weakened immune systems (such as HIV/AIDS or cancer) and people
+                        who live in nursing homes or long-term care facilities1
+                        </p>
+                        <h6>Symptoms of flu</h6>
+                        <p>Fever or feeling feverish/chills123 Cough123 Sore throat123 Runny or stuffy nose123 Muscle or body aches123 Headaches123 Fatigue (tiredness)123 Some people may have vomiting and diarrhea, though this is more common in children
+                            than adults12 Flu symptoms may vary depending on the type and severity of the infection. Some people may have mild symptoms, while others may have severe or life-threatening complications. Flu symptoms may also be similar to
+                            those of other respiratory infections, such as colds or COVID-19. It can be difficult to tell the difference between them without testing.</p>
+                        <h6>Preventive measures of flu</h6>
+                        <p>Flu is a contagious respiratory illness that is caused by influenza viruses. Flu can cause mild to severe symptoms and sometimes lead to serious complications or death. The preventive measures of flu include: Getting vaccinated
+                            against flu every year. Flu vaccines protect against the most common flu viruses that circulate each season. They can reduce the risk of getting sick, being hospitalized or dying from flu123. Avoiding close contact with people
+                            who are sick or have flu symptoms. Flu spreads mainly through respiratory droplets that are produced when someone with flu coughs, sneezes or talks. These droplets can land in the mouths or noses of people who are nearby, or
+                            be inhaled into the lungs1234. Covering your mouth and nose with a tissue or your elbow when you cough or sneeze. This can help prevent spreading germs to others. Throw away used tissues and wash your hands with soap and water
+                            or use an alcohol-based hand sanitizer1234. Washing your hands often with soap and water or using an alcohol -based hand sanitizer. This can help remove germs from your hands and prevent them from entering your eyes, nose or
+                            mouth1234. Cleaning and disinfecting frequently touched surfaces and objects that may be contaminated with flu viruses. This can include doorknobs, keyboards, phones and toys123.</p>
+                        <h6>Medicine use for treating flu</h6>
+                        <p>
+                            Cough suppressants that can relieve cough and make breathing easier. These are OTC medications , such as dextromethorphan (Robitussin) or guaifenesin (Mucinex). They should be used according to the label instructions or as recommended by your health care
+                            provider123. Decongestants that can reduce nasal congestion and sinus pressure. These are OTC medications, such as pseudoephedrine (Sudafed) or phenylephrine (Sudafed PE). They should be used according to the label instructions
+                            or as recommended by your health care provider. They may have side effects or interact with other medications123. Antihistamines that can dry up mucus and reduce sneezing and runny nose. These are OTC medications, such as diphenhydramine
+                            (Benadryl) or loratadine (Claritin). They should be used according to the label instructions or as recommended by your health care provider. They may cause drowsiness or interact with other medications123. Always consult your
+                            health care provider before taking any medicine for flu, as they may have side effects or interact with other medications. Follow the dosage instructions carefully and do not overuse pain relievers, as this may cause more frequent
+                            or worse fevers.
+                    </div>
+
+
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <div id="flip8"><b>MORE ON HEADACHE</b></div>
+                    <div id="panel8">
+
+                        <br> They are generally classified by cause: primary headaches and secondary headaches1. Primary headaches are caused by overactivity of or problems with pain-sensitive structures in your head. They are not a symptom of an underlying
+                        disease. Some examples of primary headaches are tension headaches, migraine headaches, cluster headaches and new daily persistent headaches1. Some primary headaches can be triggered by lifestyle factors or situations, such as alcohol,
+                        nicotine, sleep changes, poor posture, physical activity, skipped meals, coughing, sneezing or straining12. Secondary headaches are caused by an underlying medical condition. They are a symptom or sign of a condition. Some examples
+                        of secondary headaches are dehydration headache, sinus headache, medication overuse headache and headache due to high blood pressure23. Secondary headaches can also be caused by more serious conditions, such as brain tumors, strokes,
+                        infections or head injuries1. Headaches tend to run in families, especially migraines. Some people may have genes that make them more likely to develop primary headaches2.
+                        <h6 text-aling="center">Symptoms of headache</h6>
+                        The most common symptom is pain in your head or face, which can vary in intensity, location and quality. Some other symptoms that may occur with different types of headaches are: Tension headache: pain around the forehead, usually on both sides of the
+                        head; a sense of muscle tightness in the forehead, jaw, neck or shoulders1. Sinus headache: congestion, runny nose, fullness of the sinuses, soreness on the cheeks or forehead, watery eyes1. Migraine headache: headache on one side
+                        of the head, pulsating quality, neck stiffness or pain, photophobia (discomfort when looking at light), phonophobia (discomfort from hearing noises), hyperosmia (sensitivity to odors), nausea, vomiting, abdominal discomfort1. Some
+                        people may also experience aura, which are visual or sensory disturbances that occur before or during a migraine attack1. Cluster headache: severe pain on one side of the head, usually around the eye; swelling, redness, flushing
+                        and sweating on the affected side; nasal congestion and eye tearing on the same side as the headache2. Cluster headaches occur in cycles or clusters that last for weeks or months2. Secondary headache: symptoms vary depending on
+                        the underlying condition that causes the headache. Some examples are fever, stiff neck, confusion, weakness, numbness, vision changes or seizures3. If you have any of these symptoms or any other unusual or severe symptoms with
+                        your headache, you should see a doctor for a proper diagnosis and treatment.
+                        <h6 text-align="center">What are the preventive measures of headache</h6>
+                        Some general measures that may help prevent or reduce the frequency of headaches are: Maintaining a regular sleep schedule. Getting too little sleep and oversleeping can trigger headaches, as can getting up and going to bed at inconsistent times1. Watching
+                        what you eat and drink — and when. Don’t skip or delay meals. And drink plenty of water. Also avoid foods and drinks that can trigger headaches, such as alcohol, caffeine, aged cheeses, chocolate, processed meats and food additives21.
+                        Controlling stress. Learn techniques to help you relax and reduce emotional stress, which may be caused by overwork, job loss, financial difficulties or family problems. Stress can cause muscles to tense up and trigger headaches.
+                        Stress relief techniques include deep breathing, visualization, progressive relaxation and biofeedback1. Exercising regularly. Exercising 30 minutes at least three days a week is good for your overall health, and can help prevent
+                        migraines and tension headaches. Low-impact aerobic exercise prevents tension as it strengthens your muscles and keeps them flexible. Also good for muscle flexibility and stress relief: stretching, tai chi and yoga13. Avoiding
+                        loud noises and bright lights. Loud noises, flashing lights, glare from the sun and sensory stimulation are common triggers for migraine headaches.
+                        <h6 text-align="center">What are the medicines use for curing headache</h6>
+                        Some common medicines that may help relieve headache pain are: Acetaminophen (Panadol, paracetemol, and Tylenol). This is a class of medications that doctors call analgesics, which relieve pain, or antipyretics, which reduce fever1. Acetaminophen can
+                        relieve mild to moderate headache pain2. Aspirin (Bayer and Bufferin). This is a type of NSAID that can reduce pain and inflammation3. Aspirin can also prevent blood clots and lower the risk of stroke or heart attack in some people3.
+                        Ibuprofen (Advil and Mortin). This is another type of NSAID that can relieve headaches and inflammation3. Ibuprofen is available in tablets, capsules, granules, gel or mousse forms3. Naproxen sodium (Aleve). This is also a type
+                        of NSAID that can relieve symptoms such as fever and pain that people may experience with headaches3. Some other medicines that may be used for treating specific types of headaches are: Triptans. These are prescription drugs that
+                        can treat migraine and cluster headaches by constricting blood vessels and blocking pain pathways in the brain3. Some examples are sumatriptan (Imitrex), rizatriptan (Maxalt) and zolmitriptan (Zomig)3. Ergots. These are prescription
+                        drugs that can treat migraine and cluster headaches by constricting blood vessels and affecting serotonin levels in the brain3. Some examples are ergotamine (Ergomar) and dihydroergotamine (D.H.E. 45)3. Antinausea medications.
+                        These are prescription drugs that can treat nausea and vomiting that may occur with migraine headaches3. Some examples are metoclopramide (Reglan), prochlorperazine (Compazine) and chlorpromazine (Thorazine)3. Glucocorticoids.
+                        These are prescription drugs that can treat severe or chronic migraine headaches by reducing inflammation and swelling in the brain3. Some examples are prednisone (Deltasone) and dexamethasone (Decadron)3. Beta blockers. These
+                        are prescription drugs that can prevent migraine headaches by lowering blood pressure and reducing the effects of stress hormones on blood vessels3. Some examples are propranolol (Inderal), metoprolol (Lopressor) and atenolol (Tenormin)3.
+                        Antidepressants. These are prescription drugs that can prevent migraine headaches by affecting levels of different brain chemicals such as serotonin, which can constrict blood vessels and reduce inflammation3. Some examples are
+                        amitriptyline (Elavil), venlafaxine (Effexor) and nortriptyline (Pamelor)3. Anticonvulsants. These are prescription drugs that can prevent migraine headaches by calming overactive nerves in the brain and easing symptoms3. Some
+                        examples are valproate (Depakote), topiramate (Topamax) and gabapentin (Neurontin)3. Always consult your doctor before taking any medicine for headache, as they may have side effects or interact with other medications. Follow the
+                        dosage instructions carefully and do not overuse pain relievers, as this may cause more frequent or worse headaches.
+                    </div>
+
+
+                    </div>
+
+
+                </form>
+            </td>
+
+        </tr>
+    </table>
+
+
+</body>
+<script src="jquery.js"></script>
+<script src="jqueryui.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $("#search").autocomplete({
+            source: ["cholera", "the cholera", "the headache", "headache", "hiv", "HIV", "HIV/AIDS", "hiv/aids", "Headache", "the diabetes", "The Diabetes", "diabetes", "Diabetes", "DIABETES", "FEVER", "fever", "", "..."]
+        }, {
+            autoFocus: true
+        });
+        $("#button").click(function() {
+            if ($("#search").value == "cholera" || "the cholera") {
+                $("#div5").css("visibility", "visible");
+            }
+        });
+        // || "the headache","headache","hiv","HIV","HIV/AIDS","hiv/aids","Headache","the diabetes"||"The Diabetes"||"diabetes"||"Diabetes"||"DIABETES"||"FEVER"||"fever",)
+
+
+    });
+</script>
+
+</html>

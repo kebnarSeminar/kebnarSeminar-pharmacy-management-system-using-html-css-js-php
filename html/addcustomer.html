@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Add Customers</title>
+    <link rel="icon" type="image/x-icon" href="addcustomer.jfif">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="addcustomer.css">
+    <style>
+        .gradient-background {
+            background: linear-gradient(100deg, #200c32, #e74d89, #febaa6);
+            background-size: 180% 180%;
+            animation: gradient-animation 2s ease-in-out infinite;
+        }
+        
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="gradient-background">
+
+
+
+    <div class="cont1">
+        <form name="form1" action="addcustomer.php" method="post">
+            <h1>ADD NEW CUSTOMER</h1>
+            <div class="row">
+
+                <label for="fname"><h2>Customer<span>Name:<input type="text" placeholder="customername" id="customername" name="customername" onkeyup="validateName(this.value, 'name_error');"></span></h2></label>
+
+            </div>
+            <div class="row">
+                <label for="phone"><h2>Contact<span>Number:<input type="tel" id="phone" placeholder="09..." name="contactnumber" onblur="validateContactNumber(this.value, 'contact_number_error');"></span></h2></label>
+
+            </div>
+            <div class="row">
+                <label for="address"><h2>Address:<span></span><input type="text" id="address" placeholder="enter your address" name="address" onblur="validateAddress(this.value, 'address_error');"></span></h2></label>
+
+            </div>
+            <div class="row">
+                <label for="doctor"><h2>Doctor Name:<span></span><input type="text" placeholder="enter doctor name" id="doctor" name="doctorname"  onkeyup="validateName(this.value, 'doctor_name_error');"></span></h2></label>
+
+            </div>
+            <div class="row">
+                <label for="doctoraddress"><h2>Doctor Address:<span></span><input type="text" placeholder="enter doctor address" id="doctoraddress" name="doctoraddress" onblur="validateAddress(this.value, 'doctor_address_error');"></span></h2></label>
+
+            </div>
+            <div class="btn">
+                <button name="btn">ADD</button>
+                <button name="backbtn">BACK</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+<script src="jquery.js"></script>
+<script src="jqueryui.js"></script>
+<script>
+    $(document).ready(function() {
+
+    });
+</script>
+
+</html>

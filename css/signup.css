@@ -1,0 +1,74 @@
+body {
+    background-image: url("pills2.jpg");
+}
+
+.cont1 {
+    height: 450px;
+    width: 600px;
+    position: static;
+    background-color: darkturquoise;
+    margin: auto;
+    padding-top: 20px;
+    border-style: outset;
+    border-color: black;
+    border: 10px;
+    border-radius: 15px 50px 30px;
+    box-shadow: 2px 2px 4px red;
+    margin-top: 50px;
+}
+
+.cont1,
+h1 {
+    text-align: center;
+}
+
+.fname,
+h2 {
+    color: black;
+}
+
+.fname,
+span {
+    color: red;
+}
+
+.fname,
+input {
+    border-radius: 20px 0px;
+    color: black;
+    padding: 10px;
+}
+
+#ancor1:hover {
+    color: white;
+    transition: 2s;
+}
+
+.btn {
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.btn button {
+    border-radius: 15px 50px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    width: 100px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.registerbtn {
+    margin-right: 1300px;
+}
+
+.btn,
+button:hover {
+    color: white;
+    transition: 3s;
+}
+
+#imgprof {
+    border-radius: 50px 50px 50px 0px;
+}

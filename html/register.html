@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .sp {
+            font-size: px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <form action="register.php" method="post" id="signup" novalidate style="border: 1px;background: lightgray;" name="form1">
+        <h1 align="center" style="font-family:monospace;">
+            <span class="sp">P</span>harmacy
+            <span class="sp">M</span>anagement</h1>
+        <h1 align="center"><span class="sp">O</span>ne <span class="sp">T</span>ime <span class="sp">S</span>etup</h1>
+        <h3 align="center">Enter necessary pharmacy details</h3>
+
+        <div>
+
+            <input type="text" id="name" name="pharmaname" placeholder="pharmacy name" style="width: 90%; align: center; margin: 0px 0px 0px 24px;" required>
+        </div>
+        <br>
+
+        <div>
+
+            <input type="text" id="address" name="address" placeholder="address" required style="width: 90%; align: center; margin: 0px 0px 0px 24px;">
+        </div>
+        <br>
+
+        <div>
+
+            <input type="email" id="email" name="email" style="width: 90%; align: center; margin: 0px 0px 0px 24px;" placeholder="email" required>
+        </div>
+        <br>
+        <div>
+            <input type="text" id="contactnumber" name="contactnumber" style="width: 90%; align: center; margin: 0px 0px 0px 24px;" required placeholder="contact number">
+
+        </div>
+        <br>
+        <div>
+            <input type="text" id="username" name="username" style="width: 90%; align: center; margin: 0px 0px 0px 24px;" required placeholder="enter username">
+
+        </div>
+        <br>
+        <div>
+            <input type="password" id="password" name="password" style="width: 90%; align: center; margin: 0px 0px 0px 24px;" required placeholder="enter password">
+
+        </div>
+        <br>
+
+        <div>
+
+            <input type="password" id="passwordconfirmation" name="passwordconfirm" style="width: 90%; align: center; margin: 0px 0px 0px 24px;" required placeholder="confirm password">
+        </div><br>
+        <div>
+
+            <button type="submit" style="width: 90%; align: center; margin: 0px 0px 0px 24px; background-color:red;" name="start" onclick="start()"> REGISTER</button>
+        </div>
+    </form>
+
+
+</body>
+
+</html>

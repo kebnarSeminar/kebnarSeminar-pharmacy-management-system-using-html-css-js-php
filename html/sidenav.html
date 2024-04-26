@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="sidenav.css">
+    <title>Admin page</title>
+    <script type="text/javascript">
+        var pid = "none";
+
+        function showhide(id) {
+            var elements = document.getElementById(id).childNodes;
+            var menu = elements[3];
+            var arrow = ((elements[1].childNodes)[4].childNodes)[1];
+            if (menu.style.display == 'block') {
+                menu.style.display = "none";
+                arrow.style.transform = "rotate(0deg)";
+                elements[1].style.color = "#eeeeee";
+            } else {
+                menu.style.display = "block";
+                arrow.style.transform = "rotate(270deg)";
+                elements[1].style.color = "#ff5252";
+            }
+            if (pid == id)
+                pid = "none";
+            if (pid != "none") {
+                elements = document.getElementById(pid).childNodes;
+                menu = (document.getElementById(pid).childNodes)[3];
+                arrow = ((elements[1].childNodes)[4].childNodes)[1];
+                if (menu.style.display == 'block') {
+                    menu.style.display = "none";
+                    arrow.style.transform = "rotate(0deg)";
+                    elements[1].style.color = "#eeeeee";
+                }
+            }
+            pid = id;
+        }
+
+        function showOptions() {
+            var flag = document.getElementById('options');
+            if (flag.style.display == 'block') {
+                flag.style.display = "none";
+                document.getElementById('mark').style.display = "none";
+            } else {
+                flag.style.display = "block";
+                document.getElementById('mark').style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="card">
+            <div class="card-body">
+                <div class="logo">
+                    <img src="prof.jpg" class="profile" />
+                    <h1 class="logo-caption"><span class="tweak">A</span>dmin</h1>
+                </div>
+                <!-- logo class -->
+
+                <!-- dashboard start -->
+                <div class="main-menu-item">
+                    <a href="homepage.html"><i class="fa fa-dashboard"></i><span>HomePage</span></a>
+                </div>
+                <!-- dashboard end -->
+
+                <div id="second" class="main-menu-item" onclick="showhide(this.id);">
+                    <a href="#">
+                        <i class="fa fa-handshake"></i><span>PharmacyDetails</span>
+                        <span class="pull-right-container">
+      			<i class="fa fa-angle-left pull-right"></i>
+      		</span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class="treeview"><a href="managepharmacy.php">ManagePharmacy</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- customer end -->
+                <div id="third" class="main-menu-item" onclick="showhide(this.id);">
+                    <a href="#">
+                        <i class="fa fa-handshaking"></i><span>Customer</span>
+                        <span class="pull-right-container">
+      			<i class="fa fa-angle-left pull-right"></i>
+      		</span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class="treeview"><a href="addcustomer.html">Add Customer</a></li>
+                        <li class="treeview"><a href="manageCustomer.php">Manage Customer</a></li>
+                    </ul>
+                </div>
+                <!-- customer end -->
+
+                <!-- medicine strat -->
+                <div id="fourth" class="main-menu-item" onclick="showhide(this.id);">
+                    <a href="#">
+                        <i class="fa fa-shopping-bag"></i><span>Medicine</span>
+                        <span class="pull-right-container">
+      			<i class="fa fa-angle-left pull-right"></i>
+      		</span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class="treeview"><a href="addmedicine.html">Add Medicine</a></li>
+                        <li class="treeview"><a href="managemedicine.php">Manage Medicine</a></li>
+                        <li class="treeview">
+                            <a href="manage_medicine_stock.php"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- medicine end -->
+
+                <!-- manufacturer start -->
+                <div id="fifth" class="main-menu-item" onclick="showhide(this.id);">
+                    <a href="#">
+                        <i class="fa fa-group"></i><span>Supplier</span>
+                        <span class="pull-right-container">
+      			<i class="fa fa-angle-left pull-right"></i>
+      		</span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class="treeview"><a href="addsupplier.html">Add Supplier</a></li>
+                        <li class="treeview"><a href="managesupplier.php">Manage Supplier</a></li>
+                    </ul>
+                </div>
+                <!-- manufacturer end -->
+                <!-- search start -->
+                <div id="seventh" class="main-menu-item" onclick="showhide(this.id);">
+                    <a href="#">
+                        <i class="fa fa-search"></i><span>Remove</span>
+                        <span class="pull-right-container">
+      			<i class="fa fa-angle-left pull-right"></i>
+      		</span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class="treeview">
+                            <a href="manage_invoice.php"></a>
+                        </li>
+                        <li class="treeview"><a href="manageCustomer.php">Customer</a></li>
+                        <li class="treeview"><a href="managemedicine.php">Medicine</a></li>
+                        <li class="treeview"><a href="managesupplier.php">Supplier</a></li>
+                        <li class="treeview">
+                            <a href="manage_purchase.php"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- search end -->
+                <!-- purchase start -->
+                <div id="fifth" class="main-menu-item" onclick="showhide(this.id);">
+                    <a href="#">
+                        <i class="fa fa-bar-chart"></i><span></span>
+                        <span class="pull-right-container">
+      			<i class="fa fa-angle-left pull-right"></i>
+      		</span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class="treeview">
+                            <a href="add_purchase.php"></a>
+                        </li>
+                        <li class="treeview">
+                            <a href="manage_purchase.php"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- purchase end -->
+
+                <!-- report start -->
+                <div id="sixth" class="main-menu-item" onclick="showhide(this.id);">
+                    <a href="#">
+                        <i class="fa fa-book"></i><span></span>
+                        <span class="pull-right-container">
+      			<i class="fa fa-angle-left pull-right"></i>
+      		</span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class="treeview">
+                            <a href="sales_report.php"></a>
+                        </li>
+                        <li class="treeview">
+                            <a href="purchase_report.php"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- report end -->
+
+
+
+            </div>
+            <!-- card-body class -->
+        </div>
+        <!-- card  -->
+    </div>
+    <div id="right" name="right">
+    </div>
+</body>
+
+</html>

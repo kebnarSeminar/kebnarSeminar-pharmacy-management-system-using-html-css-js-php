@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="login.jfif">
+    <title>Registration and login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #ececec;
+            background-image: url("pills2.jpg");
+        }
+        
+        .container {
+            width: 400px;
+            height: 630px;
+            position: relative;
+            margin: 6% auto;
+            background: #fff;
+            padding: 5px;
+            overflow: hidden;
+            border: 1px solid #f1f1f1;
+            box-shadow: 0 0 20px 0 #e4e4e4;
+        }
+        
+        .tabs {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 15px #cacaca;
+            border-radius: 30px;
+        }
+        
+        .toggle-btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        
+        #btn {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right, #ff105e, #ffad05);
+            border-radius: 30px;
+            transition: .5s;
+        }
+        
+        .social-icons {
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .social-icons i {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            color: #fff;
+            margin: 0 12px;
+            background: #333;
+            border-radius: 50%;
+            transition: .5s;
+        }
+        
+        .form {
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+        }
+        
+        .input-filed {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+        
+        .submit-btn {
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right, #ff105e, #ffad05);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        
+        .check-box {
+            margin: 30px 10px 30px 0;
+        }
+        
+        span {
+            color: #777;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+        
+        #login {
+            left: 50px;
+        }
+        
+        #register {
+            left: 450px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+
+            <button type="button" class="toggle-btn" onclick="registration()">Register</button>
+        </div>
+        <a href="homepage.html"><button class="toggle-btn" ><h2><b style="color:blue;font-weight: bolder;">BACK</b></h2></button></a>
+        <!-- >  <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div><!-->
+
+        <form action="login.php" id="login" class="form" method="post">
+            <input type="text" class="input-filed" placeholder="User name required" name="username">
+            <input type="password" class="input-filed" placeholder="Password" name="password">
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn" name="loginbtn">Log in</button>
+        </form>
+
+        <form action="register.php" id="register" class="form" method="post">
+            <input type="text" class="input-filed" placeholder="pharmaname" name="pharmaname">
+            <input type="text" class="input-filed" placeholder="address required" name="address">
+            <input type="email" class="input-filed" placeholder="@gmail.com" name="email">
+            <input type="tel" class="input-filed" placeholder="contactnumber" name="contactnumber">
+            <input type="text" class="input-filed" placeholder="username" name="username">
+            <input type="password" class="input-filed" placeholder="enter password" name="password">
+            <input type="password" class="input-filed" placeholder="enter password again" name="confirmpassword">
+            <input type="checkbox" class="check-box"><span>I agree to the terms of my website & conditions</span>
+            <button type="submit" class="submit-btn" name="registerbtn">Register</button>
+
+
+        </form>
+    </div>
+
+    <script>
+        var logIn = document.getElementById("login");
+        var register = document.getElementById("register");
+        var button = document.getElementById("btn");
+
+        function registration() {
+            logIn.style.left = "-400px";
+            register.style.left = "50px";
+            button.style.left = "110px";
+        }
+
+        function login() {
+            logIn.style.left = "50px";
+            register.style.left = "450px";
+            button.style.left = "0";
+        }
+    </script>
+</body>
+
+</html>

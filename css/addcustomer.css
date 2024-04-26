@@ -1,0 +1,103 @@
+.cont1 {
+    height: 580px;
+    width: 800px;
+    position: static;
+    background-color: rgb(154, 155, 151);
+    margin: auto;
+    padding-top: 20px;
+    border-style: outset;
+    border-color: black;
+    border: 10px;
+    border-radius: 15px 50px 30px;
+    box-shadow: 2px 2px 4px red;
+    margin-top: 50px;
+}
+
+.cont1,
+h1 {
+    text-align: center;
+}
+
+.fname {
+    padding-top: 10px;
+}
+
+.fname,
+h2 {
+    color: black;
+}
+
+.fname,
+span {
+    color: red;
+}
+
+.fname,
+input {
+    border-radius: 20px 5px;
+    color: black;
+    padding: 10px;
+}
+
+.lname {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.password {
+    padding-top: 10px;
+}
+
+.checkbox {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#ancor1:hover {
+    color: white;
+    transition: 2s;
+}
+
+.btn {
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.btn button {
+    border-radius: 15px 50px;
+    padding: 10px;
+    color: red;
+    background-color: black;
+    width: 120px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.btn,
+button:hover {
+    color: white;
+    transition: 3s;
+}
+
+label input {
+    width: 300px;
+    display: table-cell;
+}
+
+.row {
+    display: table-row;
+}
+
+.row label {
+    display: table-cell;
+    padding: 4px;
+    text-align: right;
+}
+
+.row input {
+    height: 30px;
+    display: table-cell;
+    padding: 2px;
+    text-align: left;
+    border-radius: 20px 5px;
+}

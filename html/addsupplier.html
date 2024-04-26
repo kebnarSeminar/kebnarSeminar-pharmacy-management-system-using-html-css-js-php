@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Add supplier</title>
+    <link rel="icon" type="image/x-icon" href="addsupplier.jfif">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="addsupplier.css">
+</head>
+
+<body>
+
+
+
+    <div class="cont1">
+        <form name="form1" action="addsupplier.php" method="post" onsubmit="return validateTextbox()">
+            <h1>ADD NEW SUPPLIER</h1>
+            <div class="row">
+
+                <label for="supplier"><h2>supplier<span>Name:<input type="text" placeholder="supplier name" id="supplier" name="suppliername" onkeyup="validateName(this.value, 'name_error');"></span></h2></label>
+
+            </div>
+            <div class="row">
+                <label for="email"><h2>Email<span>:<input type="email" id="email" placeholder="@gmail.com" name="email" onblur="validateContactNumber(this.value, 'email_name_error');"></span></h2></label>
+
+            </div>
+            <div class="row">
+                <label for="phone"><h2>Contact Number:<span></span><input type="text" id="phone" placeholder="09..." name="contactnumber" onblur="validateAddress(this.value, 'contact_number_error');"></span></h2></label>
+
+            </div>
+            <div class="row">
+                <label for="address"><h2>Supplier Address:<span></span><input type="text" placeholder="enter address" id="address" name="address"  onkeyup="validateName(this.value, 'address_error');"></span></h2></label>
+            </div>
+
+            <div class="btn">
+                <button name="btn">ADD</button>
+                <button name="backbtn">BACK</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+<script src="jquery.js"></script>
+<script src="jqueryui.js"></script>
+<script>
+    $(document).ready(function() {
+
+
+    });
+</script>
+
+</html>
